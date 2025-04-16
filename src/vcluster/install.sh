@@ -7,9 +7,9 @@ VCLUSTER_VERSION=${VERSION:-"latest"}
 TARGET_ARCH="$(dpkg --print-architecture)"
 
 if [ "${TARGET_ARCH}" = "arm64" ]; then
-        DOWNLOAD_URL="https://github.com/loft-sh/vcluster/releases/${VCLUSTER_VERSION}/download/vcluster-linux-arm64"
+        DOWNLOAD_URL="https://github.com/loft-sh/vcluster/releases/download/${VCLUSTER_VERSION}/vcluster-linux-arm64"
 else 
-        DOWNLOAD_URL="https://github.com/loft-sh/vcluster/releases/${VCLUSTER_VERSION}/download/vcluster-linux-amd64"
+        DOWNLOAD_URL="https://github.com/loft-sh/vcluster/releases/download/${VCLUSTER_VERSION}/vcluster-linux-amd64"
 fi
     
 echo "Installing vCluster CLI version \"${VCLUSTER_VERSION}\" for architecture ${TARGET_ARCH}"
